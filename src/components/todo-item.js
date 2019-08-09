@@ -12,9 +12,32 @@ class TodoItem extends LitElement {
     super();
   }
 
+  removeTodoItem(id) {
+    this.dispatchEvent(new CustomEvent('removeTodoItem', {
+      bubbles: true,
+      composed: true,
+      detail: {
+        itemId: id
+      }
+    }));
+  }
+
+  taskDone(id) {
+    this.dispatchEvent(new CustomEvent('taskDone', {
+      bubbles: true,
+      composed: true,
+      detail: {
+        itemId: id
+      }
+    }));
+    this.requestUpdate();
+  }
+
   render() {
     return html `
-      <paper-checkbox> ${this.todoItem.item} </paper-checkbox>
+      <paper-checkbox .checked=${this.todoItem.done} 
+        @click="${() => this.taskDone(this.todoItem.id)}"> ${this.todoItem.item} </paper-checkbox>
+      <button @click="${() => this.removeTodoItem(this.todoItem.id)}"> Remove </button>
     `;
   }
 }
