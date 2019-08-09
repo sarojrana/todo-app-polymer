@@ -1,0 +1,26 @@
+{
+  "name": "todo-aapp",
+  "description": "learning polymer",
+  "main": "todo-aapp.js",
+  "dependencies": {
+    "@polymer/lit-element": "^0.7.1",
+    "@polymer/paper-checkbox": "^3.1.0",
+    "@polymer/polymer": "^3.0.0",
+    "browser-sync": "^2.26.7",
+    "concurrently": "^4.1.1",
+    "lit-html": "^1.1.1"
+  },
+  "devDependencies": {
+    "@polymer/iron-demo-helpers": "^3.1.0",
+    "@polymer/test-fixture": "^4.0.2",
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "wct-mocha": "^1.0.1"
+  },
+  "scripts": {
+    "start": "concurrently 'npm run serve' 'npm run watch'",
+    "serve": "polymer serve --port 8081",
+    "watch": "browser-sync start --proxy localhost:8081 --open \"src/components\" --files \"**/*.js\""
+  }
+}
