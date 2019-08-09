@@ -40,6 +40,11 @@ class AddItem extends LitElement {
       done: false
     });
     localStorage.setItem('todo-list', JSON.stringify(todoList));
+    this.dispatchEvent(new CustomEvent('addTodoItem', {
+      bubbles: true,
+      composed: true,
+      detail: { todoList }
+    }));
     this.todoItem = '';
   }
 
