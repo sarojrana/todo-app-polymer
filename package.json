@@ -13,6 +13,7 @@
     "lodash": "^4.17.15",
     "pwa-helpers": "^0.9.1",
     "redux": "^4.0.4",
+    "redux-persist": "^5.10.0",
     "reselect": "^4.0.0"
   },
   "devDependencies": {
