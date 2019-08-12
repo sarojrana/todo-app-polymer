@@ -3,17 +3,48 @@
   <head>
     <meta charset="utf-8">
     <!-- <meta http-equiv="refresh" content="0;url=demo/" /> -->
-    <title>todo-app</title>
+    <title>Todo App</title>
+    <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet">
     <script src="./node_modules/lodash/lodash.min.js"></script>
     <script type="module">
       import './src/components/app.js';
-      import './src/components/add-item.js';
-      import './src/components/list-items.js';
-      import './src/components/todo-item.js';
+      import './src/components/redux-todos.js';
     </script>
+    <script>
+      window.process = {
+        env: {
+          NODE_ENV: 'production'
+        }
+      };
+    </script>
+    <style>
+      body {
+        background: #039ad4f7;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      .container {
+        background: #fff;
+        padding: 1rem 1em;
+        margin: 5px;
+        min-height: 600px;
+      }
+      h1 {
+        text-align: center;
+        color: #04678e;
+      }
+    </style>
   </head>
   <body>
-    <todo-app></todo-app>
-    <list-items></list-items>
+    <div class="container">
+      <h1>Using Local Storage</h1>
+      <hr>
+      <todo-app></todo-app>
+    </div>
+    <div class="container">
+      <h1>Using Redux Store</h1>
+      <hr>
+      <redux-todos></redux-todos>
+    </div>
   </body>
 </html>
