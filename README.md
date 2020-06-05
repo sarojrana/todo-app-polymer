@@ -1,4 +1,4 @@
-# \<todo-aapp\>
+# \<todo-app\>
 
 learning polymer
 
@@ -19,3 +19,10 @@ $ polymer test
 ```
 
 Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
+
+## References
+
+```
+npm install redux pwa-helpers reselect redux-persist  
+```
+https://vaadin.com/tutorials/lit-element/state-management-with-redux

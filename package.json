@@ -5,11 +5,16 @@
   "dependencies": {
     "@polymer/lit-element": "^0.7.1",
     "@polymer/paper-checkbox": "^3.1.0",
+    "@polymer/paper-radio-group": "^3.0.1",
     "@polymer/polymer": "^3.0.0",
     "browser-sync": "^2.26.7",
     "concurrently": "^4.1.1",
     "lit-html": "^1.1.1",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.15",
+    "pwa-helpers": "^0.9.1",
+    "redux": "^4.0.4",
+    "redux-persist": "^5.10.0",
+    "reselect": "^4.0.0"
   },
   "devDependencies": {
     "@polymer/iron-demo-helpers": "^3.1.0",

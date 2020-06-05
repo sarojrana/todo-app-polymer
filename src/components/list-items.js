@@ -17,7 +17,22 @@ class ListItems extends LitElement {
 
   render() {
     return html `
-      <ul>${repeat(this.todoList, (todoItem) => html `<li><todo-item .todoItem=${todoItem}></todo-item></li>`)}</ul>
+    <style>
+      .lists {
+        padding-top: 1rem;
+      }
+
+      .list .list-wrapper {
+        list-style: none;
+        margin: 0 0.5rem;
+        padding: 0;
+      }
+    </style>
+    <div class="lists">
+      <div class="list-wrapper">
+        ${repeat(this.todoList, (todoItem) => html `<todo-item .todoItem=${todoItem}></todo-item>`)}
+      </div>
+    </div>
     `;
   }
 }
